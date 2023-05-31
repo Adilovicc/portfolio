@@ -1,13 +1,259 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    background-color: #121312;
+}
+/* NAVBAR */
+#navbar{
+    transition:ease-in-out;
+    transition-duration: 1000ms;
+    padding-top:40px;
+    position:fixed;
+    top:0;
+    background-color:rgba(222,333,444,0.0);
+  }
+#navbar.scrolled{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color:black;
+}
+.navbar-link{
+    color:white !important;
+    font-weight: 1000;
+    opacity:0.75;
+    transition: 0.3s ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.active.navbar-link{
+    color:white !important;
+    font-weight: 400;
+    opacity:1.0;
+}
+#lets_connect_button_cover{
+    width:0%;
+    height: 100%;
+    background-color: white;
+    position:absolute;
+    left:0;
+    top:0;
+    transition:0.3s ease-in-out;
+}
+#lets_connect_button:hover #lets_connect_button_cover{
+    width:100%;
+    height: 100%;
+}
+#lets_connect_button{
+    margin-left:20px;
+}
+
+.dropdownMenu{
+   position:absolute;
+   right:0;
+   top:28px;
+   width:170px;
+   height:0px;
+   background-color:rgba(39, 39, 39, 1);
+   border:0px solid white;
+   border-radius:10px;
+   border-top-right-radius: 0px;
+   transition:1s ease-in-out;
+   padding:0px;
+}
+
+.dropDownMenuVisible{
+   height:180px;
+   border:0px;
+}
+
+/* BANNER */
+.banner{
+    background-image: url('https://e0.pxfuel.com/wallpapers/846/344/desktop-wallpaper-portfolio.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    z-index: 0;
+}
+.cover{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:0%;
+    background:rgba(000,000,0,0.8);
+    transition:1s ease-in-out;
+    z-index: 0;
+}
+
+.cover.show{
+   height:100%;
+}
+span.writing{
+   position:relative;
+   line-height: 1;
+}
+.writing::after{
+   content:'';
+   width:3px;
+   height:100%;
+   position:absolute;
+   background-color:white;
+   animation: blink 0.7s linear infinite;
+   filter:brightness(70%);
+   max-height: 55px;
+}
+
+#cont p{
+    line-height:1.5em;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+      }
+      70% {
+        opacity: 1;
+        visibility: visible;
+      }
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-40px);
+        animation-timing-function: cubic-bezier(0.8,0,1,1);
+    }
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0,0,0.2,1);
+    }
+}
+
+/* SKILLS */
+
+.circleMax{
+    
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #ff0000;
+        background-image: linear-gradient(to right, transparent 50%, #ffffff 50%);
+        transform: rotate(-90deg);
+      
+}
+
+.circular-chart {
+    display: block;
+    height:60%;
+    width:60%;
+    min-height: 180px;
+    min-width: 180px;
+    max-height: 250px;
+    max-width: 250px;
+  }
+  
+  .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 4.8;
+  }
+  
+  .circle {
+    fill: none;
+    stroke-width: 5.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+  
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+  
+  .circular-chart.orange .circle {
+    stroke: #ff9f00;
+  }
+  
+  .circular-chart.green .circle {
+    stroke: #121212;
+  }
+  
+  .circular-chart.blue .circle {
+    stroke: #121212;
+  }
+  
+  .percentage {
+    fill: white;
+    font-weight:800;
+    font-family: sans-serif;
+    font-size: 0.4em;
+    text-anchor: middle;
+  }
+
+
+  #skills-text-box{
+    position:relative;
+    width:100%;
+    max-width: 900px;
+    text-align: center;
+    padding:20px 40px;
+    font-size:18px;
+    font-weight:400
+      
+  }
+
+  #skills-text-box p{
+    z-index: 10;
+    
+  }
+
+  .skills-text-cover{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height: 0%;
+    transition:0s ease-out;
+    background-color: rgba(18,18,18,1);
+    z-index:1;
+    border-radius: 8px;
+  }
+
+  .skills-text-cover.skills-visible{
+     height:100%;
+     transition-duration: 4s;
+  }
+
+  /* Projects */ 
+
+.projects{
+    background-color: rgb(250, 250, 250);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.mojElement{
+    width:100%;
+    height:50px;
+    background-color: #ff0000;
 }
