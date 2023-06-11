@@ -7,7 +7,7 @@ import computerImg from '../assets/images/computers.png'
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer"];
+    const toRotate = [ "Full Stack Web Developer", "Next.js Developer", "UI/UX Designer"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(2000 - Math.random()* 100);  
 
@@ -87,7 +87,7 @@ export const Banner = () => {
                             </span>
                         </h1>
                         <p>
-                              Hi, my name is Ali. I'm 24 years old almost (but not yet) Sotftware engineering graduate looking for a job. Enjoy my developer portfolio...
+                            I am a Software Engineering student looking for a job. Enjoy my developer portfolio...
                         </p>
                         <button className="mt-14 flex font-semibold text-lg items-center" onClick={()=> console.log('connect')}>
                               Let's connect

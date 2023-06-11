@@ -81,12 +81,12 @@ export const Skills = () => {
               a 15.9155 15.9155 0 0 1 0 -31.831"
        />
       <path class="circle"
-      stroke-dasharray={`${percent.percent},100`}
+      strokeDasharray={`${percent.percent},100`}
       d="M18 2.0845
      a 15.9155 15.9155 0 0 1 0 31.831
       a 15.9155 15.9155 0 0 1 0 -31.831"
       />
-     <text x="18" y="20.35" class="percentage">{percent.percent}%</text>
+     <text x="18" y="20.35" className="percentage">{percent.percent}%</text>
      </svg>
       )
     }
@@ -97,16 +97,16 @@ export const Skills = () => {
               <Container className="h-screen sticky top-[90px] border-white w-full" >
                     
                     <div className="flex flex-col items-center justify-center w-full text-white mb-5 pt-2">
-                        <div className="">
-                          <h1> Skills</h1>
+                        <div className="w-full  max-w-[930px] flex">
+                          <h1 className="pl-5 text-5xl underline font-bold font-serif text-[#121212]"> Skills</h1>
                         </div>
                         <div ref={skillsVisible} id='skills-text-box'>
-                         
+                         <div className="max-h-[200px] overflow-clip">
                           <p className="relative z-50">Here is the list of all the programming languages, frameworks and tools I'm familiar with.<br>
                             </br>There's also my subjective evaluation of each one of them. That doesn't mean it's 100% on point, but at least you should get some, as to say
                              general perspective of what I know 
                              and where I find myself better compared to others (things)  </p>
-                          
+                          </div>
                           <div className={`skills-text-cover ${isVisible ? 'skills-visible' : ''}`}></div>
                         </div>
                       </div>

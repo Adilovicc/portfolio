@@ -50,7 +50,7 @@ export const NavBar = () => {
                       <a href="#skills" className="no-underline"><p className="text-lg hover:font-semibold  my-[0px] cursor-pointer text-white">Skills  </p></a>
                       <a href="#projects" className="no-underline"><p className="text-lg hover:font-semibold  my-[0px] cursor-pointer text-white">Projects</p></a>
                       <div className="flex w-full justify-center mt-3">
-                      <a href="https://www.facebook.com/profile.php?id=100009659624261" target="_blank" className="relative mr-1 p-2 border-[1px] border-white/75 bg-[rgba(217,217,217,0.1)]  rounded-full group">
+                      <a href="https://www.linkedin.com/in/ali-adilovic-40259727a/" target="_blank" className="relative mr-1 p-2 border-[1px] border-white/75 bg-[rgba(217,217,217,0.1)]  rounded-full group">
                         <div className="absolute top-0 left-0 rounded-full h-full w-full scale-0 group-hover:scale-100 transition ease-in-out duration-300 bg-white"></div>
                         <img src={NavIcon1} alt="" className="h-[16px] group-hover:brightness-0 transition ease-in duration-300"></img>
                      </a>
@@ -79,14 +79,14 @@ export const NavBar = () => {
              {dropdownMenu()}
           </div>
           <div className="hidden md:flex h-full items-center">
-            <Nav className=" flex">
-              <Nav.Link href="#home" className={`${activeLink==='home' ? 'active navbar-link' : 'navbar-link'}`} onClick={()=>{setActiveLink("home")}}> Home </Nav.Link>
-              <Nav.Link href="#skills" className={`${activeLink==='skills' ? 'active navbar-link' : 'navbar-link'}`} onClick={()=>{setActiveLink("skills")}}> Skills </Nav.Link>
-              <Nav.Link href="#projects" className={`${activeLink==='projects' ? 'active navbar-link' : 'navbar-link'}`} onClick={()=>{setActiveLink("projects")}}>Projects</Nav.Link>
+            <Nav className="grid grid-cols-3">
+              <Nav.Link href="#home" className={`${activeLink==='home' ? 'active navbar-link' : 'navbar-link'}`} onClick={()=>{setActiveLink("home")}}> Home <div className="underlined"></div></Nav.Link>
+              <Nav.Link href="#skills" className={`${activeLink==='skills' ? 'active navbar-link' : 'navbar-link'}`} onClick={()=>{setActiveLink("skills")}}> Skills  <div className="underlined"></div></Nav.Link>
+              <Nav.Link href="#projects" className={`${activeLink==='projects' ? 'active navbar-link' : 'navbar-link'}`} onClick={()=>{setActiveLink("projects")}}>Projects  <div className="underlined"></div></Nav.Link>
             </Nav>
             <span className="navbar-text h-full pl-[20px]">
                 <div className="flex h-full items-center space-x-1">
-                     <a href="https://www.facebook.com/profile.php?id=100009659624261" target="_blank" className="relative p-2 border-[1px] border-white/75 bg-[rgba(217,217,217,0.1)]  rounded-full group">
+                     <a href="https://www.linkedin.com/in/ali-adilovic-40259727a/" target="_blank" className="relative p-2 border-[1px] border-white/75 bg-[rgba(217,217,217,0.1)]  rounded-full group">
                         <div className="absolute top-0 left-0 rounded-full h-full w-full scale-0 group-hover:scale-100 transition ease-in-out duration-300 bg-white"></div>
                         <img src={NavIcon1} alt="" className="h-[16px] group-hover:brightness-0 transition ease-in duration-300"></img>
                      </a>
