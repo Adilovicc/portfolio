@@ -110,7 +110,7 @@ export const Projects = () => {
                         </div>
                       </div>
                       <div className="aspect-video col-span-2 sm:col-span-1 px-8 sm:px-0 flex flex-shrink-0 overflow-hidden">
-                         <a href={'https://jelovnik-app.vercel.app/'} target='_blank'><div  style={{transform:`translateX(-${currentSlide*100}%)`}} className="flex h-full flex-shrink-0 transition-transform ease-out duration-1000">
+                         <a href={'https://slide-n-rate-app.vercel.app/'} target='_blank'><div  style={{transform:`translateX(-${currentSlide*100}%)`}} className="flex h-full flex-shrink-0 transition-transform ease-out duration-1000">
                             <img className="slider-item aspect-video h-full rounded-md border-[0.5px] border-black/20" src={as1}></img>
                             <img className="slider-item aspect-video h-full rounded-md border-[0.5px] border-black/20" src={as2}></img>
                             <img className="slider-item aspect-video h-full rounded-md border-[0.5px] border-black/20" src={as3}></img>
