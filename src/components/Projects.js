@@ -82,7 +82,7 @@ export const Projects = () => {
                             <p>{currentValues[0].text}</p>
                             </div>
                             {currentValues[0].image==jelovnikBg &&  <div className="mx-3 border-[0.5px] rounded-lg border-red-800 px-3 py-1 text-center mb-2 text-red-600 font-serif font-semibold">Remark: Work on this application is still in progress.</div>}
-                            {currentValues[0].title=='Answer&Slide app' && <div className="mx-3 border-[0.5px] rounded-lg border-red-800 px-3 py-1 text-center mb-2 text-red-600 font-serif font-semibold"><b>Remark:</b> Login with credentials: admin@email.com, Pw123456</div>}
+                            {currentValues[0].title=='Answer&Slide app' && <div className="mx-3 border-[0.5px] rounded-lg border-red-800 px-3 py-1 text-center mb-2 text-red-600 font-serif font-semibold"><b>Remark:</b> Login with credentials: admin@mail.com, Pw55555</div>}
                             <div className="px-3 w-full flex items-center justify-center">
                                 <a href={currentValues[0].github} target="_blank"><button className="flex items-center font-semibold px-3 py-1 border-[0.5px] rounded-md mr-1
                                  hover:bg-[rgba(171,171,171,0.3)] transition-all duration-200"><img src={githubLogo} className="h-8 w-8"></img>Code</button></a>
