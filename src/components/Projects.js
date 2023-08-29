@@ -3,6 +3,7 @@ import huluBg from '../assets/images/hulu-clone-bg.PNG'
 import noteBg from '../assets/images/note-bg.PNG'
 import jelovnikBg from '../assets/images/jelovnikapp.PNG'
 import githubLogo from '../assets/images/githubLogo.png'
+import finderBg from '../assets/images/finder.PNG'
 //import {as1,as2,as3,as4,as5,as6} from '../assets/images'
 import as1 from '../assets/images/as1.PNG'
 import as2 from '../assets/images/as2.PNG'
@@ -22,6 +23,7 @@ export const Projects = () => {
     const huluText=["The Hulu-Clone app is a Next.js application developed with a focus on building a streaming platform similar to Hulu. It leverages Hulu APIs to retrieve data and replicate some of the key features of the popular streaming service. The app incorporates Next.js, a powerful React framework, to create a smooth and efficient user experience. Tailwind CSS is utilized for designing the app, ensuring a modern and responsive interface. By utilizing Hulu APIs and leveraging Next.js, the Hulu-Clone app provides users with the ability to browse, discover, and stream a wide range of movies and TV shows. It showcases the developer's skills in frontend development, API integration, and UI design."]
     const notebookText=["TO-DO App is a simple Next.js application that allows users to manage their tasks effectively. With this app, users can easily add, list, edit, and delete their to-do items. The application leverages the power of Prisma, which handles all the database operations, and utilizes PostgreSQL as the underlying database to securely store the task data. User authentication is implemented using NextAuth.js with the Google provider, ensuring a seamless and secure login experience. The app also features a clean and modern design, thanks to the utilization of Tailwind CSS framework, enabling an intuitive and user-friendly interface."]
     const answerNslideText=["Answer&Slide is a Next.js application that utilizes various technologies and tools such as Firebase Storage, PostgreSQL database, Prisma ORM, and Tailwind CSS for styling.\n\nThis is my first project completed for a client on Upwork. Its main purpose is to provide an examination platform. The application includes an admin panel where an admin user can create exams. In the exam creation process, the admin can set up list of answers that would be offered on each post (question) that belongs to that particular exam.\n\nAdditionally, the admin has the abilities to generate users and manage participants by adding or removing them from a particular exam. Users who are added as participants to a specific exam will see the name of that exam in a dropdown menu. Upon selecting an exam from the dropdown, the user will be able to view the posts associated with that exam. These posts can include images and/or PDF files. The user can then proceed to answer the questions related to the exam.\n\n The admin user has complete visibility and control over the entire examination process. They can track and monitor the answers provided by users. Additionally, the admin has the ability to extract the collected answers and export them to an Excel table or perform other relevant actions. Overall, the project aims to provide a comprehensive examination platform with features for exam creation, participant management, real-time post viewing, user answering, and admin oversight and analysis."]
+    const placeFinderText=["PlaceFinder is a dynamic Next.js application that leverages Google Maps APIs to help users effortlessly discover places like restaurants, gas stations, airports, and shopping malls. With a user-friendly interface and powerful search filters, you can easily find and explore various points of interest. NextMap's integration of Google Maps ensures seamless navigation, while its stylish design, enhanced by Tailwind CSS, offers a modern and visually pleasing experience. Start your journey of exploration with PlaceFinder and uncover the best of your surroundings with just a few clicks."]
     const [currentValues, setCurrentValues] = useState([{image:jelovnikBg, title:'Spotify remote App', text:jelovnikText, link:'', github:''}])
     
     const detailedActive = useRef(false);
@@ -97,6 +99,23 @@ export const Projects = () => {
               </div>
               <div className="w-full flex justify-center"><div className="w-full max-w-[950px] pt-5"><h5 className="pl-5 text-5xl underline font-bold font-serif">Projects</h5></div></div>
               <div id="projectsContainer" className="pt-2 pb-10 flex flex-col items-center">
+
+              <div id="project" className="grid grid-cols-2 m-3 gap-2 w-full max-w-[950px] rounded-md group sm:pl-5">
+                      <div className="col-span-2 sm:col-span-1 w-full aspect-video px-8 sm:px-0">
+                      <a href="https://spotify-remote-app-wine.vercel.app" target="_blank"><img className="w-full h-full rounded-md" src={finderBg}></img></a>
+                      </div>
+                      <div className={`sm:hidden group-hover:mojElement`}></div>
+                      <div className="hidden sm:col-span-1 w-full h-full rounded-md sm:flex flex-col pl-3">
+                              <h2 className="font-serif">Place Finder App</h2>
+                              <p className="font-serif  sm:line-clamp-3 md:line-clamp-5 lg:line-clamp-6 pr-5">{placeFinderText}</p>
+                                <div className="w-full flex justify-start">
+                                    <button 
+                                     onClick={()=>{setCurrentValues([{image:finderBg, title:'Place Finder App', text:placeFinderText, link:'https://place-finder-pearl.vercel.app/', github:'https://github.com/Adilovicc/place_finder'}]); detailed();}}
+                                     className="border-[0.5px] border-black/20 w-[50%] py-2
+                                     bg-white font-serif font-semibold shadow-sm">More details</button>
+                               </div>
+                      </div>
+                  </div>
                  
                 <div id="project" className="grid grid-cols-2 my-3 gap-2 w-full max-w-[950px] rounded-md group sm:pr-5 ">
                       <div className="hidden col-span-1 h-full rounded-md sm:flex flex-col pr-3">
