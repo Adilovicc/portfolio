@@ -102,7 +102,7 @@ export const Projects = () => {
 
               <div id="project" className="grid grid-cols-2 m-3 gap-2 w-full max-w-[950px] rounded-md group sm:pl-5">
                       <div className="col-span-2 sm:col-span-1 w-full aspect-video px-8 sm:px-0">
-                      <a href="https://spotify-remote-app-wine.vercel.app" target="_blank"><img className="w-full h-full rounded-md" src={finderBg}></img></a>
+                      <a href="https://place-finder-pearl.vercel.app/" target="_blank"><img className="w-full h-full rounded-md" src={finderBg}></img></a>
                       </div>
                       <div className={`sm:hidden group-hover:mojElement`}></div>
                       <div className="hidden sm:col-span-1 w-full h-full rounded-md sm:flex flex-col pl-3">
