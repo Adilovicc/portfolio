@@ -42,6 +42,12 @@ export const NavBar = () => {
 
     }
 
+    const goToConnect = () => {
+      const connect = document.getElementById('contact');
+      connect.scrollIntoView({behavior:'smooth'})
+
+    }
+
     const dropdownMenu = () => {
        return (
              <div className={`dropdownMenu ${dropDownMenuVisible ? 'dropDownMenuVisible' : ''} md:hidden flex flex-col`}>
@@ -86,19 +92,35 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text h-full pl-[20px]">
                 <div className="flex h-full items-center space-x-1">
-                     <a href="https://www.linkedin.com/in/ali-adilovic-40259727a/" target="_blank" className="relative p-2 border-[1px] border-white/75 bg-[rgba(217,217,217,0.1)]  rounded-full group">
+                     <a 
+                     href="https://www.linkedin.com/in/ali-adilovic-40259727a/" 
+                     target="_blank" 
+                     className="relative p-2 border-[1px] border-white/75 bg-[rgba(217,217,217,0.1)]  rounded-full group"
+                     >
                         <div className="absolute top-0 left-0 rounded-full h-full w-full scale-0 group-hover:scale-100 transition ease-in-out duration-300 bg-white"></div>
                         <img src={NavIcon1} alt="" className="h-[16px] group-hover:brightness-0 transition ease-in duration-300"></img>
                      </a>
-                     <a href="https://www.facebook.com/profile.php?id=100009659624261" target="_blank" className="relative p-2 border-[1px] border-white/75 bg-[rgba(217,217,217,0.1)]  rounded-full group">
+                     <a 
+                     href="https://www.facebook.com/profile.php?id=100009659624261" 
+                     target="_blank" 
+                     className="relative p-2 border-[1px] border-white/75 bg-[rgba(217,217,217,0.1)]  rounded-full group"
+                     >
                         <div className="absolute top-0 left-0 rounded-full h-full w-full scale-0 group-hover:scale-100 transition ease-in-out duration-300 bg-white"></div>
                         <img src={NavIcon2} alt="" className="h-[16px] group-hover:brightness-0 transition ease-in duration-300"></img>
                      </a>
-                     <a href="https://github.com/Adilovicc" target="_blank" className="relative p-2 border-[1px] border-white/75 bg-[rgba(217,217,217,0.1)] rounded-full group">
+                     <a 
+                     href="https://github.com/Adilovicc" 
+                     target="_blank" 
+                     className="relative p-2 border-[1px] border-white/75 bg-[rgba(217,217,217,0.1)] rounded-full group"
+                     >
                         <div className="absolute top-0 left-0 rounded-full h-full w-full scale-100 group-hover:scale-0 transition ease-in-out duration-300 bg-white"></div>
                         <img className="h-[16px] group-hover:brightness-[400] transition ease-in duration-300 scale-[3.3]"  src={githubLogo} alt="" ></img>
                      </a>
-                     <button id="lets_connect_button" className="relative h-14 border-2 border-white text-white font-serif  w-[140px] group" onClick={()=>console.log("conn")}>
+                     <button 
+                        id="lets_connect_button" 
+                        className="relative h-14 border-2 border-white text-white font-serif  w-[140px] group" 
+                        onClick={()=>goToConnect()}
+                     >
                        <span className="transition ease-in-out duration-300 group-hover:text-black"> Let's connect</span>
                        <div id="lets_connect_button_cover" className="-z-10"></div>
                     </button>

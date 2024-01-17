@@ -117,7 +117,7 @@ export const Projects = () => {
                       </div>
                   </div>
                  
-                <div id="project" className="grid grid-cols-2 my-3 gap-2 w-full max-w-[950px] rounded-md group sm:pr-5 ">
+                <div id="project" className="grid grid-cols-2 m-3 gap-2 w-full max-w-[950px] rounded-md group sm:pr-5 ">
                       <div className="hidden col-span-1 h-full rounded-md sm:flex flex-col pr-3">
                         <div className="flex justify-end"><h2 className="font-serif">Answer&Slide app</h2></div>
                         <p className="font-serif sm:line-clamp-3 md:line-clamp-5 lg:line-clamp-6 pl-5 text-right">{answerNslideText}</p>
@@ -129,7 +129,9 @@ export const Projects = () => {
                         </div>
                       </div>
                       <div className="aspect-video col-span-2 sm:col-span-1 px-8 sm:px-0 flex flex-shrink-0 overflow-hidden">
-                         <a href={'https://slide-n-rate-app.vercel.app/'} target='_blank'><div  style={{transform:`translateX(-${currentSlide*100}%)`}} className="flex h-full flex-shrink-0 transition-transform ease-out duration-1000">
+                         <a href={'https://slide-n-rate-app.vercel.app/'} target='_blank'
+                         ><div  style={{transform:`translateX(-${currentSlide*100}%)`}} className="flex h-full flex-shrink-0 transition-transform 
+                         ease-out duration-1000">
                             <img className="slider-item aspect-video h-full rounded-md border-[0.5px] border-black/20" src={as1}></img>
                             <img className="slider-item aspect-video h-full rounded-md border-[0.5px] border-black/20" src={as2}></img>
                             <img className="slider-item aspect-video h-full rounded-md border-[0.5px] border-black/20" src={as3}></img>
